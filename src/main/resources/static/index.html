@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title>Book Catalog (non-TLS)</title>
+	    <link rel="stylesheet" type="text/css" href="style.css">
+	</head>
+	<body>
+		<h1>Book Catalog (non-TLS)</h1>
+	    <div class = "button-container">
+			<div>
+			  <label for="author-filter">Filter by Author:</label>
+			  <input type="text" id="author-filter" placeholder="Enter author name">
+			  <button style="display: inline-block; padding: 6px 12px; background-color: #4caf50; border: none; cursor: pointer;" id="filter-button" onclick="filterTable()">Filter</button>
+			</div>
+		    
+		    <br>
+		    
+		    <button style="display: inline-block; padding: 6px 12px; background-color: #4caf50; border: none; cursor: pointer;" onclick="fetchAndPopulateBooks()">Show All</button>
+		
+		    <a href="/insert_book.html" target="_blank" style="text-decoration: none;">
+			  <button style="display: inline-block; padding: 6px 12px; background-color: #4caf50; border: none; cursor: pointer;">
+			    Insert
+			  </button>
+			</a>
+		
+			<a href="/update_book.html" target="_blank" style="text-decoration: none;">
+			  <button style="display: inline-block; padding: 6px 12px; background-color: #4caf50; border: none; cursor: pointer;">
+			    Update
+			  </button>
+			</a>
+			
+			<a href="/delete_book.html" target="_blank" style="text-decoration: none;">
+			  <button style="display: inline-block; padding: 6px 12px; background-color: #4caf50; border: none; cursor: pointer;">
+			    Delete
+			  </button>
+			</a>
+		</div>
+		
+		<hr>
+	
+	    <table id="book-table">
+	        <thead>
+	            <tr>
+					<th>Id</th>
+	                <th>Title</th>
+	                <th>Series</th>
+	                <th>Author</th>
+	                <th>Language</th>
+	                <th>Isbn</th>
+	                <th>Publisher</th>
+	                <th>numRatings</th>
+	                <th>likedPercent</th>
+	                <th>bbeScore</th>
+	                <th>bbeVotes</th>
+	                <th>Price</th>
+	            </tr>
+	        </thead>
+	        <tbody id="book-table-body">
+	            <!-- Table rows will be dynamically populated using JavaScript -->
+	        </tbody>
+	    </table>
+	
+	    <script src="script.js"></script>
+	</body>
+</html>
